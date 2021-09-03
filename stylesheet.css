@@ -21,8 +21,8 @@ h1 {
   position: relative;
 }
 
-.flip > .front,
-.flip > .back {
+.flip .front,
+.flip .back {
   display: block;
   -webkit-transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
           transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -34,12 +34,12 @@ h1 {
   transition-property: transform, opacity, -webkit-transform;
 }
 
-.flip > .front {
+.flip .front {
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
 
-.flip > .back {
+.flip .back {
   position: absolute;
   opacity: 0;
   top: 0px;
@@ -50,28 +50,28 @@ h1 {
           transform: rotateY(-180deg);
 }
 
-.flip:hover > .front {
+.flip:hover .front {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-.flip:hover > .back {
+.flip:hover .back {
   opacity: 1;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
 
-.flip.flip-vertical > .back {
+.flip.flip-vertical .back {
   -webkit-transform: rotateX(-180deg);
           transform: rotateX(-180deg);
 }
 
-.flip.flip-vertical:hover > .front {
+.flip.flip-vertical:hover .front {
   -webkit-transform: rotateX(180deg);
           transform: rotateX(180deg);
 }
 
-.flip.flip-vertical:hover > .back {
+.flip.flip-vertical:hover .back {
   -webkit-transform: rotateX(0deg);
           transform: rotateX(0deg);
 }
@@ -84,8 +84,8 @@ h1 {
   width: 400px;
 }
 
-.flip > .front,
-.flip > .back {
+.flip .front,
+.flip .back {
   display: block;
   color: white;
   width: inherit;
@@ -97,8 +97,8 @@ h1 {
   border-radius: 10px;
 }
 
-.flip > .front p,
-.flip > .back p {
+.flip .front p,
+.flip .back p {
   font-size: 0.9125rem;
   line-height: 160%;
   color: #999;

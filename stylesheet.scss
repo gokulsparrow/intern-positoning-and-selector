@@ -20,17 +20,17 @@ h1 {
 // base
 .flip {
     position: relative;
-    >.front,
-    >.back {
+    .front,
+    .back {
         display: block;
         transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
         transition-duration: .5s;
         transition-property: transform, opacity;
     }
-    >.front {
+    .front {
         transform: rotateY(0deg);
     }
-    >.back {
+    .back {
         position: absolute;
         opacity: 0;
         top: 0px;
@@ -40,23 +40,23 @@ h1 {
         transform: rotateY(-180deg);
     }
     &:hover {
-        >.front {
+        .front {
             transform: rotateY(180deg);
         }
-        >.back {
+        .back {
             opacity: 1;
             transform: rotateY(0deg);
         }
     }
     &.flip-vertical {
-        >.back {
+        .back {
             transform: rotateX(-180deg);
         }
         &:hover {
-            >.front {
+            .front {
                 transform: rotateX(180deg);
             }
-            >.back {
+            .back {
                 transform: rotateX(0deg);
             }
         }
@@ -70,8 +70,8 @@ h1 {
     margin-right: 2px;
     margin-bottom: 1em;
     width: 400px;
-    >.front,
-    >.back {
+    .front,
+    .back {
       display: block;
       color: white;
       width: inherit;
